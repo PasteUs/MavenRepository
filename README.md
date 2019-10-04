@@ -10,7 +10,7 @@ Maven Repository
     <repositories>
         <repository>
             <id>github-repo</id>
-            <url>https://raw.githubusercontent.com/PasteUs/MavenRepository/master</url>
+            <url>https://cdn.jsdelivr.net/gh/PasteUs/MavenRepository@latest</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
