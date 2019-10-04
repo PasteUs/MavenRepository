@@ -20,5 +20,5 @@ jobs:
           cd push_dir
           git config user.name "PasteUs Bot"
           git config user.email "${GITHUB_USERNAME}"
-          git tag latest master
+          git tag -f latest master
           git push -f https://${GITHUB_PASSWORD}@github.com/PasteUs/MavenRepository.git latest
