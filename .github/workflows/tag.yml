@@ -15,11 +15,10 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
           GITHUB_PASSWORD: ${{ secrets.GITHUB_PASSWORD }}
-          GITHUB_REPOSITORY: github.com/PasteUs/MavenRepository.git
         run: |
-          git clone https://${GITHUB_REPOSITORY} push_dir
+          git clone https://github.com/PasteUs/MavenRepository.git push_dir
           cd push_dir
           git config user.name "PasteUs Bot"
           git config user.email "${GITHUB_USERNAME}"
           git tag latest master
-          git push https://${GITHUB_PASSWORD}@${GITHUB_REPOSITORY} latest
+          git push https://${GITHUB_PASSWORD}@github.com/PasteUs/MavenRepository.git latest
