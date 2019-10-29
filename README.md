@@ -9,7 +9,7 @@ Maven Repository
 ```xml
     <repositories>
         <repository>
-            <id>github-repo</id>
+            <id>pasteus-github-mvn-repo</id>
             <url>https://raw.githubusercontent.com/PasteUs/MavenRepository/master</url>
             <snapshots>
                 <enabled>true</enabled>
@@ -17,6 +17,25 @@ Maven Repository
             </snapshots>
         </repository>
     </repositories>
+```
+
+## Mirror
+
+### 本地镜像
+
+启动本地镜像服务：`docker-compose up -d`
+
+在 `settings.xml` 中加入镜像：
+
+```xml
+    <mirrors>
+        <mirror>
+            <id>pasteus-github-mvn-repo-mirror</id>
+            <mirrorOf>pasteus-github-mvn-repo</mirrorOf>
+            <name>PasteUs GitHub Mirror</name>
+            <url>http://localhost:8080</url>
+        </mirror>
+    </mirrors>
 ```
 
 ## Hint

@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  pasteus-github-mvn-repo:
+    image: registry.cn-hangzhou.aliyuncs.com/pasteus/github-mvn-repo:latest
+    container_name: pasteus-github-mvn-repo
+    healthcheck:
+      test: ["CMD", "service", "nginx", "status"]
+      interval: 45s
+      timeout: 3s
+      retries: 3
+    restart: always
+    ports:
+      - 8080:80

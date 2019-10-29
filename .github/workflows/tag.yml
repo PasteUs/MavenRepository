@@ -22,3 +22,12 @@ jobs:
           git config user.email "${GITHUB_USERNAME}"
           git tag -f latest master
           git push -f https://${GITHUB_PASSWORD}@github.com/PasteUs/MavenRepository.git latest
+
+      - name: publish docker
+        uses: LucienShui/Publish-Docker-Github-Action@2.7.1
+        with:
+                name: registry.cn-hangzhou.aliyuncs.com/pasteus/github-mvn-repo:latest
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          registry: registry.cn-hangzhou.aliyuncs.com
+          dockerfile: Dockerfile
