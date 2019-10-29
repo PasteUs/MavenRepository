@@ -4,5 +4,5 @@ LABEL maintainer="Lucien Shui" \
 COPY ./ /www/
 RUN cd /www/ && \
     rm -rf .git .gitignore .github docker-compose.yml Dockerfile LICENSE && \
-    echo 'server{listen 80;server_name default;root /www;autoindex on;autoindex_exact_size on;autoindex_localtime on;}' > /etc/nginx/conf.d/default.conf 
+    echo 'server{listen 80;server_name default;root /www;autoindex on;autoindex_exact_size on;autoindex_localtime on;}' > /etc/nginx/conf.d/default.conf
 EXPOSE 80
