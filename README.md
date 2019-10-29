@@ -23,9 +23,11 @@ Maven Repository
 
 ### 本地镜像
 
-启动本地镜像服务：`docker-compose up -d`
+1. 将 [docker-compose.yml](./docker-compose.yml) 文件下载或复制至本地
 
-在 `settings.xml` 中加入镜像：
+2. 启动本地镜像服务：`docker-compose up -d`
+
+3. 在 `settings.xml` 中加入镜像：
 
 ```xml
     <mirrors>
@@ -40,4 +42,4 @@ Maven Repository
 
 ## Hint
 
-`https://cdn.jsdelivr.net/gh/PasteUs/MavenRepository@latest` 作为 `maven` 仓库时下载 `jar` 包会 `Forbidden`，暂时不清楚原因。
+使用 `https://cdn.jsdelivr.net/gh/PasteUs/MavenRepository@latest` 作为 `maven` 仓库时下载 `jar` 包会 `Forbidden`，暂时不清楚原因。
