@@ -21,13 +21,28 @@ Maven Repository
 
 ## Mirror
 
+### 在线镜像
+
+3. 在 `settings.xml` 中加入镜像配置：
+
+```xml
+    <mirrors>
+        <mirror>
+            <id>pasteus-github-mvn-repo-mirror</id>
+            <mirrorOf>pasteus-github-mvn-repo</mirrorOf>
+            <name>PasteUs GitHub Mirror</name>
+            <url>http://mvnrepo.pasteme.lucien.ink</url>
+        </mirror>
+    </mirrors>
+```
+
 ### 本地镜像
 
 1. 将 [docker-compose.yml](./docker-compose.yml) 文件下载或复制至本地
 
 2. 启动本地镜像服务：`docker-compose up -d`
 
-3. 在 `settings.xml` 中加入镜像：
+3. 在 `settings.xml` 中加入镜像配置：
 
 ```xml
     <mirrors>
