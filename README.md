@@ -23,7 +23,7 @@ Maven Repository
 
 ### 在线镜像
 
-3. 在 `settings.xml` 中加入镜像配置：
+在 `settings.xml` 中加入镜像配置：
 
 ```xml
     <mirrors>
