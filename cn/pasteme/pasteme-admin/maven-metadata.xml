@@ -4,8 +4,8 @@
   <artifactId>pasteme-admin</artifactId>
   <versioning>
     <versions>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.2-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20191112071813</lastUpdated>
+    <lastUpdated>20191117153414</lastUpdated>
   </versioning>
 </metadata>
